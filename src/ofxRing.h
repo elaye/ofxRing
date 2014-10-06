@@ -21,8 +21,8 @@ class ofxRing {
 		
 		void draw();
 		void setPosition(float x, float y);
-		void setRInt(float r);
-		void setRExt(float r);
+		void setInnerRadius(float r);
+		void setOuterRadius(float r);
 		void setResolution(int resolution);
 
 	private:

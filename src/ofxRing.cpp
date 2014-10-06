@@ -18,18 +18,19 @@ void ofxRing::setPosition(float x, float y){
 	updateExtVertices();
 }
 
-void ofxRing::setRInt(float r){
+void ofxRing::setInnerRadius(float r){
 	r_int = r;
 	updateIntVertices();
 }
 
-void ofxRing::setRExt(float r){
+void ofxRing::setOuterRadius(float r){
 	r_ext = r;
 	updateExtVertices();
 }
 
 void ofxRing::setResolution(int resolution){
 	n = resolution;
+	initMesh();
 }
 
 void ofxRing::draw(){
@@ -37,6 +38,7 @@ void ofxRing::draw(){
 }
 
 void ofxRing::initMesh(){
+	mesh.clear();
 	mesh.addVertex(ofVec3f(p.x + r_int*cos((float)M_PI/n), p.y + r_int*sin((float)M_PI/n), 0));
 	mesh.addVertex(ofVec3f(p.x + r_ext, p.y, 0));
 
