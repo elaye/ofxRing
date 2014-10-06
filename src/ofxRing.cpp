@@ -12,6 +12,19 @@ ofxRing::ofxRing(float x, float y, float _r_int, float _r_ext, int resolution){
 	initMesh();
 }
 
+ofPoint ofxRing::getPosition(){
+	return p;
+}
+float ofxRing::getInnerRadius(){
+	return r_int;
+}
+float ofxRing::getOuterRadius(){
+	return r_ext;
+}
+int ofxRing::getResolution(){
+	return n;
+}
+
 void ofxRing::setPosition(float x, float y){
 	p = ofPoint(x, y);
 	updateIntVertices();

@@ -25,6 +25,11 @@ class ofxRing {
 		void setOuterRadius(float r);
 		void setResolution(int resolution);
 
+		ofPoint getPosition();
+		float getInnerRadius();
+		float getOuterRadius();
+		int getResolution();
+
 	private:
 		void initMesh();
 		void updateIntVertices();
