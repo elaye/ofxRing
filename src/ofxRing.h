@@ -36,3 +36,12 @@ class ofxRing {
 		void updateExtVertices();
 		void updateVbo();
 };
+
+inline void ofxDrawRing(float x, float y, float innerRadius, float outerRadius){
+	ofxRing ring(x, y, innerRadius, outerRadius);
+	ring.draw();
+}
+
+inline void ofxDrawRing(ofPoint pos, float innerRadius, float outerRadius){
+	ofxDrawRing(pos.x, pos.y, innerRadius, outerRadius);
+}

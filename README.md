@@ -19,9 +19,17 @@ Clone this repository into your openFrameworks addon directory, for example:
 Usage
 -----
 
-Create a ring like this:
+You can draw a ring directly like this:
 
-    ofxRing ring(x, y, inner_radius, outer_radius);
+    ofxDrawRing(float x, float y, float inner_radius, float outer_radius);
+
+or
+
+    ofxDrawRing(ofPoint position, float inner_radius, float outer_radius);
+
+...or you can create a ring like this:
+
+    ofxRing ring(float x, float y, float inner_radius, float outer_radius);
 
 And then draw it:
 
